@@ -14,11 +14,15 @@ noteRoute.post("/", (req, res) => {
       console.error(error);
     } else {
       const notes = JSON.parse(data);
-      const status = handleNotePost(notes, req.body);
+      const { updatedNotes, status } = handleNotePost(notes, req.body);
 
-      fs.writeFile("./db/db.json", JSON.stringify(notes, null, 4), (err) => {
-        err ? console.error(err) : res.status(200).json(status);
-      });
+      fs.writeFile(
+        "./db/db.json",
+        JSON.stringify(updatedNotes, null, 4),
+        (err) => {
+          err ? console.error(err) : res.status(200).json(status);
+        }
+      );
     }
   });
 });
