@@ -13,7 +13,7 @@ noteRoute.post("/", (req, res) => {
     if (error) {
       console.error(error);
     } else {
-      const notes = JSON.parse(data);
+      var notes = JSON.parse(data);
       const { updatedNotes, status } = handleNotePost(notes, req.body);
 
       fs.writeFile(
@@ -32,7 +32,7 @@ noteRoute.delete("/:id", (req, res) => {
     if (error) {
       console.error(error);
     } else {
-      const notes = JSON.parse(data);
+      var notes = JSON.parse(data);
       const updatedList = handleNoteDelete(notes, req.params.id);
 
       fs.writeFile(
