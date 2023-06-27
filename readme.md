@@ -45,3 +45,8 @@ When you enter both the title and text for the new note, a 'floppy disk' will ap
 When you press the button, a new note will be saved and shown on the left.
 
 ![saveNote_2](./screenshot/saveNote2.png)
+
+## Link to the app
+
+- Github link: [cckinwest's github](https://github.com/cckinwest/noteTaker)
+- Link to deployment: [link](https://week11-notetaker-app-f59e0075203e.herokuapp.com/)
